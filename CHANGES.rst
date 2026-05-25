@@ -1,3 +1,10 @@
+v5.1.0 - 2026-05-25
+===================
+
+- Support disabling builtin metrics (``builtin-metrics: false``) (#407).
+- Dependencies updates.
+
+
 v5.0.2 - 2026-03-21
 ===================
 
