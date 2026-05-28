@@ -234,7 +234,8 @@ additional database drivers. This can be used as a base image for installing onl
 
    FROM adonato/query-exporter:<version>-base
 
-   apt-get install <my database driver>
+   RUN apt-get install -y <my database driver>
+   RUN uv pip install -r <my-requirements-file>
    ...
 
 
