@@ -101,9 +101,9 @@ types = [
 ]
 
 [tool.setuptools]
-dynamic.version = { attr = "query_exporter.__version__" }
-package-data.query_exporter = [ "py.typed" ]
 packages.find.include = [ "query_exporter*" ]
+package-data.query_exporter = [ "py.typed" ]
+dynamic.version = { attr = "query_exporter.__version__" }
 
 [tool.ruff]
 line-length = 79
@@ -121,15 +121,15 @@ expand_tables = [ "tool.tox" ]
 rules.unresolved-import = "ignore"
 
 [tool.pytest]
-ini_options.asyncio_mode = "auto"
-ini_options.asyncio_default_fixture_loop_scope = "function"
-ini_options.markers = [
-  "database_only: only run test on specified database(s)",
-  "database_exclude: don't run test on specified database(s)",
-]
 ini_options.testpaths = [
   "tests",
 ]
+ini_options.markers = [
+  "database_exclude: don't run test on specified database(s)",
+  "database_only: only run test on specified database(s)",
+]
+ini_options.asyncio_default_fixture_loop_scope = "function"
+ini_options.asyncio_mode = "auto"
 
 [tool.coverage]
 run.source = [ "query_exporter" ]
