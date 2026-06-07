@@ -30,6 +30,6 @@ jobs:
           image-names: ${{ github.event.repository.name }}
           cut-off: ${{ inputs['cut-off'] || '2months' }}
           account: user
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           image-tags: "^(pr-|sha-).*$"
           dry-run: ${{ inputs['dry-run'] || 'false' }}
